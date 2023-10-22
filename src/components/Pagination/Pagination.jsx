@@ -1,7 +1,6 @@
 import './Pagination.css'
 
 export const Pagination = ({ setCurrentPage, currentPage, totalPages }) => {
-  console.log(totalPages);
   const onPreviousClick = () => {
     if (currentPage == 1) return;
     setCurrentPage(currentPage - 1);
@@ -13,9 +12,9 @@ export const Pagination = ({ setCurrentPage, currentPage, totalPages }) => {
   }
 
   return (
-    <div className=" paginationContainer">
+    <div className="paginationContainer">
       <span className="pagination-btn "><button onClick={onPreviousClick}>&lt;Anterior</button></span>
-      <span className="pagination-btn"><button href="#">{currentPage}</button></span>
+      <span className="pagination-btn"><button>{currentPage}</button></span>
       <span className="pagination-btn"><button onClick={onNextClick}>Siguiente&gt;</button></span>
     </div>
   )

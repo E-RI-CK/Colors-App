@@ -1,4 +1,8 @@
 .paginationContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
     margin: 1rem;
     padding: 0.2rem 1rem;
     border: 1px solid #000;
