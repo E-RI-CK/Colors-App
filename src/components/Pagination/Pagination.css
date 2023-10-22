@@ -1,0 +1,19 @@
+.paginationContainer {
+    margin: 1rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pagination-btn {
+    display: block;
+}
+
+button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}

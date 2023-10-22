@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
-import { Pagination } from "../Pagination";
-import { Color } from "../ColorItem/ColorItem";
+import { useState, useEffect, useMemo } from "react";
+import { Pagination } from "../Pagination/Pagination";
+import { ColorItem } from "../ColorItem/ColorItem";
 import './ColorList.css'
 
 export const ColorsList = () => {
+    const [totalPages, setTotalPages] = useState(null);
     const [colors, setColors] = useState([]);
     const [colorsPerPage, setColorsPerPage] = useState(9);
     const [currentPage, setCurrentPage] = useState(1);
@@ -12,13 +13,13 @@ export const ColorsList = () => {
         const data = await fetch(`https://reqres.in/api/colors?per_page=${colorsPerPage}&page=${currentPage}`);
         const json = await data.json();
         setColors(json.data);
-        console.log(json.data);
+        setTotalPages(json.total_pages);
         console.log(json);
     }
 
     useEffect(() => {
         colorList();
-    }, []);
+    }, [currentPage]);
 
     return (
         <>
@@ -26,12 +27,12 @@ export const ColorsList = () => {
                 <div className="colorsContainer">
                     {
                         colors.map(color => (
-                            <Color key={color.id} {...color} />
+                            <ColorItem key={color.id} {...color} />
                         ))
                     }
                 </div >
             </div>
-            <Pagination />
+            <Pagination setCurrentPage={setCurrentPage} currentPage={currentPage} totalPages={totalPages} />
         </>
     )
 }
