@@ -1,5 +1,7 @@
 .colorsContainer {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2vh 0.1vw;
+    justify-content: space-around;
     align-content: space-between;
 }

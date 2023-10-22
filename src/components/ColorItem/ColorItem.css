@@ -1,5 +1,32 @@
 .colorItemContainer {
-    border: 0.5px solid #000;
+    /* border: 0.5px solid #000; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 10px;
-    margin-right: 1px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    height: 27vh;
+}
+
+.name-padding {
+    margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+    .colorItemContainer {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .colorItemContainer {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 993px) {
+    .colorItemContainer {
+        width: 30vw;
+    }
 }
