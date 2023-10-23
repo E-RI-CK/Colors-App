@@ -1,5 +1,10 @@
+.paginationMainContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 .paginationContainer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
     width: 98%;

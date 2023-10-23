@@ -2,7 +2,7 @@ import './Modal.css'
 export const Modal = ({ id, year, color, pantone_value }) => {
     return (
         <div id={id} className='modalMainContainer' style={{ zIndex: 1 }}>
-            <div className="modalContainer" style={{ background: `${color}` }} >
+            <div className="modalContainer animate__animated animate__fadeInLeft" style={{ background: `${color}` }} >
                 <div className='textLeft'>
                     <span >{year}</span>
                 </div>

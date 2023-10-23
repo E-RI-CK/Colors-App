@@ -1,16 +1,31 @@
 import './ColorItem.css'
 
-export const ColorItem = ({ id, name, year, color, pantone_value, setModalDisplay }) => {
+export const ColorItem = ({ id, name, year, color, pantone_value, onMouseEnter }) => {
     const onOpenModal = () => {
-        const $Modal = document.getElementById(id);
-        $Modal.style.display = "flex";
+        let $modal = document.getElementById(id),
+            $title = document.querySelector(".title"),
+            $pagination = document.querySelector(".paginationMainContainer"),
+            $colorsContainer = document.querySelector(".colorsListContainer");
+        $title.style.opacity = 0.3;
+        $pagination.style.opacity = 0.3;
+        $colorsContainer.style.opacity = 0.3;
+        $modal.style.display = "flex";
+        navigator.clipboard.writeText(color);
+
         setTimeout(() => {
-            $Modal.style.display = "none";
-        }, 1500);
+            $modal.style.display = "none";
+            $title.style.opacity = 1;
+            $pagination.style.opacity = 1;
+            $colorsContainer.style.opacity = 1;
+            $title = null;
+            $pagination = null;
+            $colorsContainer = null;
+        }, 1400);
+
     }
     return (
         <button onClick={onOpenModal}>
-            <div className="p-2 colorItemContainer" style={{ background: `${color}` }}>
+            <div className="p-2 colorItemContainer animate__animated" style={{ background: `${color}` }} onMouseEnter={onMouseEnter}>
                 <div className='text-start'>
                     <span>{year}</span>
                 </div>

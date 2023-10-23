@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <h2 className="title">Colores</h2>
+      <h1 className="title animate__animated animate__bounce">Colores</h1>
       <ColorsList />
     </>
   )
