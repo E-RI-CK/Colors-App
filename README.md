@@ -13,3 +13,4 @@ Technologies and Frameworks used:
 - Animate CSS: To animate the different components
 
 
+

@@ -1,4 +1,5 @@
-import './Modal.css'
+import './Modal.css';
+
 export const Modal = ({ id, year, color, pantone_value }) => {
     return (
         <div id={id} className='modalMainContainer' style={{ zIndex: 1 }}>

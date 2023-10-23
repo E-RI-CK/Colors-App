@@ -1,7 +1,6 @@
-import { useState, useEffect, useMemo } from "react";
 import { Pagination } from "../Pagination/Pagination";
 import { ColorItem } from "../ColorItem/ColorItem";
-import './ColorList.css'
+import './ColorList.css';
 import { Modal } from "../Modal/Modal";
 import { useFetchColors } from "../../hooks";
 

@@ -1,4 +1,4 @@
-import './ColorItem.css'
+import './ColorItem.css';
 
 export const ColorItem = ({ id, name, year, color, pantone_value, onMouseEnter }) => {
 
