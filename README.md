@@ -37,9 +37,9 @@ Open a page in the browser and copy and paste the following:
 http://localhost:5173/
 ```
 Link to Colors App deployment:
-```bash
-https://6536062e34f656717a06d8ea--colors-app-deploy.netlify.app/
-```
+
+<https://6536062e34f656717a06d8ea--colors-app-deploy.netlify.app/>
+
 
 ![Colors App](./src/assets/Colors-App.png)
 
