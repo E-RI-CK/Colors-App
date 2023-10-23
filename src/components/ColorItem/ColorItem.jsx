@@ -1,6 +1,8 @@
 import './ColorItem.css'
 
 export const ColorItem = ({ id, name, year, color, pantone_value, onMouseEnter }) => {
+
+    //Function to open and close the modal component
     const onOpenModal = () => {
         let $modal = document.getElementById(id),
             $title = document.querySelector(".title"),

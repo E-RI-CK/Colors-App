@@ -1,8 +1,15 @@
-# React + Vite
+# Colors App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This page was created to ease access and management by obtaining different standardized colors. Wiht Just one click a user can get the color in hexadecimal format.
 
-Currently, two official plugins are available:
+Technologies and Frameworks used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Yarn: Such as node package manager
+- Vite: Such as frontend tool to building fast and optmized web apps
+- React: Such as JavaScript Library
+- React Hooks: To manage the web app global state
+- Bootstrap: Such as CSS Framework
+- Flex Box: To manage the Grid
+- Animate CSS: To animate the different components
+
+

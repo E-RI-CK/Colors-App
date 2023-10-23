@@ -3,20 +3,12 @@ import { Pagination } from "../Pagination/Pagination";
 import { ColorItem } from "../ColorItem/ColorItem";
 import './ColorList.css'
 import { Modal } from "../Modal/Modal";
+import { useFetchColors } from "../../hooks";
 
 export const ColorsList = () => {
-    const [totalPages, setTotalPages] = useState(null); //Total pages of the Colors API
-    const [colors, setColors] = useState([]);           //All the colors of the Colors API
-    const colorsPerPage = 9;                            //Number of colors per page
-    const [currentPage, setCurrentPage] = useState(1);  //Current Page
 
     //Fetch to Color API to obtain the data in json format
-    const colorList = async () => {
-        const data = await fetch(`https://reqres.in/api/colors?per_page=${colorsPerPage}&page=${currentPage}`);
-        const json = await data.json();
-        setColors(json.data);
-        setTotalPages(json.total_pages);
-    }
+    const { colors, currentPage, setCurrentPage, totalPages } = useFetchColors();
 
     //Event to obtain the node where did a hover 
     const onMouseEnter = (event) => {
@@ -27,12 +19,6 @@ export const ColorsList = () => {
             $colorItem = null;
         }, 1000);
     }
-
-    //Secundary Effect to Fetch API
-    useEffect(() => {
-        colorList();
-    }, [currentPage]);
-
 
     return (
         <>
